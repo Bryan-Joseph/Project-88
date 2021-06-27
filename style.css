@@ -1,0 +1,16 @@
+p {
+    display: inline-block;
+    font-size:30px;
+    margin: 10px;
+}
+body {
+    background-image: url("https://cdn.vox-cdn.com/thumbor/KMFfvIEjOIwHSvpTbCXqIXwNJjk=/0x227:1688x1688/1400x933/filters:focal(731x663:1001x933):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/60222205/InfinityWar5aabd55fed5fa.0.jpg");
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#myCanvas{
+    border : 10px ridge grey;
+    background-color: white;
+    
+}
