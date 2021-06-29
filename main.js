@@ -83,19 +83,28 @@ window.addEventListener('keydown' , function(e) {
     }
 
     //movement
-    if (keypress == "ArrowUp"){
-       up();
+    if (keypress == "ArrowUp" && player.y > 0){
+       moveChar(0 , -1);
     }
-    if (keypress == "ArrowDown"){
-        down();
+    if (keypress == "ArrowDown" && player.y < 500 - player.height){
+        moveChar(0 , 1);
     }
-    if (keypress == "ArrowLeft"){
-        left();
+    if (keypress == "ArrowLeft" && player.x > 0){
+        moveChar(-1 , 0);
     }
-    if (keypress == "ArrowRight"){
-        right();
+    if (keypress == "ArrowRight" && player.x < 800 - player.width){
+        moveChar(1 , 0);
     }
 
 });
+
+function moveChar(x , y){
+    player.x += x * player.speed;
+    player.y += y * player.speed;
+
+
+    playerUpdate();
+    canvas.remove(playerImg);
+}
 
 
